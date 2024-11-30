@@ -7,11 +7,17 @@ jobs:
     name: Build my project ✨
     runs-on: ubuntu-latest
     steps:
-      # Checkout
+      # Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           lfs: true
+
+      # Clean repository
+      - name: Clean repository
+        run: |
+          git clean -fdx  # Removes untracked files and directories
+          git reset --hard  # Discards local changes and resets to the last commit
 
       # Cache
       - uses: actions/cache@v3
