@@ -48,6 +48,7 @@ jobs:
         with:
           projectPath: TestCICDProject # Correct path to your Unity project
           targetPlatform: WebGL
+          allowDirtyBuild: true
 
       # Output
       - uses: actions/upload-artifact@v3
