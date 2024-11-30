@@ -29,6 +29,7 @@ jobs:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
+          projectPath: TestCICDProject # Correct path to your Unity project
           githubToken: ${{ secrets.GITHUB_TOKEN }}
 
       # Build
@@ -39,6 +40,7 @@ jobs:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
+          projectPath: TestCICDProject # Correct path to your Unity project
           targetPlatform: WebGL
 
       # Output
